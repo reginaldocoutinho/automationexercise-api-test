@@ -1,0 +1,23 @@
+{
+  "name": "automationexercise-api-test",
+  "version": "1.0.0",
+  "description": "Teste de API no site automationexercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reginaldocoutinho/automationexercise-api-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reginaldocoutinho/automationexercise-api-test/issues"
+  },
+  "homepage": "https://github.com/reginaldocoutinho/automationexercise-api-test#readme",
+  "devDependencies": {
+    "cypress": "^15.9.0"
+  }
+}

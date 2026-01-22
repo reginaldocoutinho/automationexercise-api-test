@@ -1,0 +1,14 @@
+# Dependências (muito pesadas)
+node_modules/
+
+# Arquivos gerados pelo Cypress
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# Configurações sensíveis (credenciais)
+cypress.env.json
+
+# Arquivos do Sistema e IDE
+.DS_Store
+.vscode/
