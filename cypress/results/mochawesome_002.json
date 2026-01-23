@@ -1,0 +1,86 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-01-22T18:17:47.963Z",
+    "end": "2026-01-22T18:17:49.099Z",
+    "duration": 1136,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "82e280e2-7891-4e85-80ef-9ac4f0c5353d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\get_all_products.cy.js",
+      "file": "cypress\\e2e\\get_all_products.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Get all products",
+          "fullTitle": "Get all products",
+          "timedOut": null,
+          "duration": 1080,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "// Faz a requisição\ncy.request({\n  method: 'GET',\n  url: 'https://automationexercise.com/api/productsList'\n}).then(response => {\n  // Valida o Status Code(Sucesso)\n  expect(response.status).to.eq(200);\n  // Valida se o corpo da resposta não está vazio.\n  expect(response.body).to.not.be.null;\n});",
+          "err": {},
+          "uuid": "69095ecb-065a-4647-810b-fc7c6f338fba",
+          "parentUUID": "82e280e2-7891-4e85-80ef-9ac4f0c5353d",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "69095ecb-065a-4647-810b-fc7c6f338fba"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 1080,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
