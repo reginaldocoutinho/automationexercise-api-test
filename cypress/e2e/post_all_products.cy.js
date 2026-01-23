@@ -1,4 +1,4 @@
-it('POST To All Products List', () =>{
+it('POST_To_All_Products_List', () =>{
     // Faz a requisição
     cy.request({
         method:'POST',
@@ -12,5 +12,6 @@ it('POST To All Products List', () =>{
         //Verifica se a contem a mensagem no corpo da requisição
         expect(response.body.responseCode).to.eq(405);
         expect(response.body.message).to.eq("This request method is not supported.");
+        console.log(response.body);
     });
 });

@@ -1,4 +1,4 @@
-it('Get all products', () => {
+it('Get_all_products', () => {
   // Faz a requisição
   cy.request({
     method: 'GET',
@@ -9,5 +9,6 @@ it('Get all products', () => {
     
     // Valida se o corpo da resposta não está vazio.
     expect(response.body).to.not.be.null;
+    console.log(response.body);
   });
 });

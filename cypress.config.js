@@ -1,13 +1,18 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    charts: true,               // Gera gráficos no relatório
+    reportPageTitle: 'Relatório de Testes',
+    embeddedScreenshots: true,  // Prints ficam dentro do HTML
+    inlineAssets: true,         // Gera um único arquivo HTML (sem pastas externas)
+    saveAllAttempts: false,
+  },
   e2e: {
-    reporter: 'mochawesome',
-    reporterOptions: {
-      reportDir: 'cypress/results', // Onde os JSONs serão salvos
-      overwrite: false,
-      html: false, // Desative o HTML individual
-      json: true,  // Ative o JSON individual
+    setupNodeEvents(on, config) {
+      // Ativa o plugin de geração de relatórios
+      require('cypress-mochawesome-reporter/plugin')(on);
     },
   },
 });
