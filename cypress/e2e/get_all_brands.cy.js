@@ -1,4 +1,4 @@
-it('Get_All_Brands_List', () => {
+it('Valida método GET, retorno da lista de marcas', () => {
     //Requisição
     cy.request({
         method:'GET',

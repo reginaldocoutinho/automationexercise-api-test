@@ -1,4 +1,4 @@
-it.only('Post_to_search_product', () =>{
+it('Valida que o método POST retornara a lista de produtos filtradas ao passar um parametor', () =>{
     cy.request({
         method:'POST',
         url:'https://automationexercise.com/api/searchProduct',

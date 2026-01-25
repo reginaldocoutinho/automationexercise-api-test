@@ -1,4 +1,4 @@
-it('Get_all_products', () => {
+it('Valida método GET, retorno de lista de produtos', () => {
   // Faz a requisição
   cy.request({
     method: 'GET',

@@ -1,4 +1,4 @@
-it('POST_To_All_Products_List', () =>{
+it('Valida se o método Post não suporta a requisição de login pela url /productsList', () =>{
     // Faz a requisição
     cy.request({
         method:'POST',
