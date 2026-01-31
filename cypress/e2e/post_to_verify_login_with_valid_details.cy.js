@@ -8,6 +8,7 @@ it('Login com usuário válido', () =>{
         const body = JSON.parse(response.body)
         if(body.message) {
             expect(body.message).to.eq('User exists!')
+            expect(body.responseCode).to.eq(200)
         }
         console.log('Response body:', body)
     })

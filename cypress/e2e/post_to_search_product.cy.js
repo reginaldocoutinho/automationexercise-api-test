@@ -7,8 +7,10 @@ it('Valida que o método POST retornara a lista de produtos filtradas ao passar 
     }).then((response)=> {
         //Verifica o status code é o esperado
         const body = JSON.parse(response.body)
-        if(body.message) {
-            expect(body.message).to.eq('Searched products list')
+        if(body.products) {
+            expect(body.products).to.be.an('array')
+            expect(body.products.length).to.be.greaterThan(0)
+            expect(body.responseCode).to.eq(200)
         }
         console.log('Response body:', body)
     })
