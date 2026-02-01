@@ -4,7 +4,7 @@ it('Método Post para criação de nova conta', () => {
         url:'https://automationexercise.com/api/updateAccount',
         form:true,
         body:{name:'Name teste Update',
-            email:'teste12@outlook.com',
+            email:'teste12@outlook1.com',
             password:'teste',title:'Mr',birth_date:'10', 
             birth_month:'10',birth_year:'1998',
             firstname:'Teste first name', 
@@ -16,10 +16,10 @@ it('Método Post para criação de nova conta', () => {
         const body = JSON.parse(response.body)
         
         if (body.message === 'User updated!') {
-            expect(response.status).to.eq(200);
+            expect(body.responseCode).to.eq(200);
             // Outras validações para sucesso
         } else if (body.message === 'Account not found!') {
-            expect(response.status).to.eq(200); // Ou o código de erro da sua API
+            expect(body.responseCode).to.eq(404); // Ou o código de erro da sua API
             // Outras validações para erro
         }
     })

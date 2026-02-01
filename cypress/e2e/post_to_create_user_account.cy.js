@@ -16,10 +16,10 @@ it('Método Post para criação de nova conta', () => {
         const body = JSON.parse(response.body)
         
         if (body.message === 'User created!') {
-            expect(response.status).to.eq(200);
+            expect(body.responseCode).to.eq(200);
             // Outras validações para sucesso
         } else if (body.message === 'Email already exists!') {
-            expect(response.status).to.eq(200); // Ou o código de erro da sua API
+            expect(body.responseCode).to.eq(400); // Ou o código de erro da sua API
             // Outras validações para erro
         }
     })
